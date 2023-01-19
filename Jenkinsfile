@@ -4,6 +4,7 @@ pipeline {
         stage('front-end') {
             steps {
                 sh 'echo "hello inside ui"'
+                sh 'npm install'
                 sh 'npm run build'
                 sh 'sudo service nginx stop'
                 sh 'sudo rmdir /var/www/html/chatbot-dist/dist'
