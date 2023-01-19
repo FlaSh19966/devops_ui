@@ -1,0 +1,9 @@
+@import "custom";
+#conference_layout {
+    .btn {
+        border-radius: 5rem;
+        text-transform: capitalize;
+        color: $primary;
+        background-color: #ffffff;
+    }
+}

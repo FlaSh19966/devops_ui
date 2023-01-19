@@ -1,0 +1,10 @@
+@import "custom";
+$primary-color: $primary;
+// $default-color: $primary2;
+@import '~vue2-datepicker/scss/index.scss';
+
+#conference_layout {
+    .mx-datepicker {
+        width: 100%;
+    }
+}

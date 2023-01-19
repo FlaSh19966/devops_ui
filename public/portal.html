@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <link rel="icon" type="image/png" sizes="96x96" href="/img/cense_logo.png">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <title>Cense AI</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!--     Fonts and icons     -->
+  <!-- <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,300italic,400italic">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <link href="https://use.fontawesome.com/releases/v5.0.8/css/all.css" rel="stylesheet"> -->
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,300italic,400italic" rel="stylesheet">
+  <link href="/css/fontawesome.all.css" rel="stylesheet">
+  <link href="/css/bootstrap.min.css" rel="stylesheet">
+  <link href="/css/style.css" rel="stylesheet">
+  <link href="/css/jquery-ui.css" rel="stylesheet">
+  <!-- Theme included stylesheets -->
+  <link href="/css/tagsinput.css" rel="stylesheet">
+  <link href="https://cdn.quilljs.com/1.3.6/quill.snow.css" rel="stylesheet">
+  <link href="/css/toastr.min.css" rel="stylesheet">
+  <link href="https://staging.cense.ai/bot-widget/css/app.css" rel="stylesheet">
+</head>
+
+<body>
+  <div id="app"></div>
+  <script src="/js/quill.min.js"></script>
+  <script src="/js/checkout.js"></script>
+  <script src="/js/jquery.min.js"></script>
+  <script src="/js/popper.min.js"></script>
+  <script src="/js/libflac4-1.3.2.min.js"></script>
+  <script src="/js/toastr.min.js"></script>
+  <script src="/js/bootstrap.min.js"></script>
+  <script src="/js/quill-custom-dropdown.min.js"></script>
+  <script src="https://staging.cense.ai/bot-widget/js/app.js"></script>
+  <!-- <script src="https://sdks.shopifycdn.com/buy-button/latest/buybutton.js"></script> -->
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB8kiYtH9Jukl7t3V2xJC5MyVXqfyPmDjg&libraries=places" defer></script>
+  <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+  <script>
+    (function (w, d, s, g, js, fjs) {
+      g = w.gapi || (w.gapi = {});
+      g.analytics = {
+        q: [],
+        ready: function (cb) {
+          this.q.push(cb);
+        },
+      };
+      js = d.createElement(s);
+      fjs = d.getElementsByTagName(s)[0];
+      js.src = "https://apis.google.com/js/platform.js";
+      fjs.parentNode.insertBefore(js, fjs);
+      js.onload = function () {
+        g.load("analytics");
+      };
+    })(window, document, "script");
+  </script>
+  <script>
+    window.fbAsyncInit = function () {
+    // JavaScript SDK configuration and setup
+    FB.init({
+      appId:    '414311007408014', // Facebook App ID
+      cookie:   true, // enable cookies
+      xfbml:    true, // parse social plugins on this page
+      version:  'v14.0' //Graph API version
+    });
+  };
+  (function (d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = "https://connect.facebook.net/en_US/sdk.js";
+    fjs.parentNode.insertBefore(js, fjs);
+  }(document, 'script', 'facebook-jssdk'));
+  </script>
+  <!-- <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v13.0&appId=414311007408014&autoLogAppEvents=1" nonce="yMMV8zG9"></script> -->
+  <!-- <script src="js/tagsinput.js"></script> -->
+  <!-- Include all compiled plugins (below), or include individual files as needed -->
+
+  <!-- built files will be auto injected -->
+</body>
+
+</html>

@@ -1,0 +1,788 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for src/pages/Dashboard/Components/Notifications.vue</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="..\..\..\..\prettify.css" />
+    <link rel="stylesheet" href="..\..\..\..\base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(..\..\..\..\sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="..\..\..\..\index.html">All files</a> / <a href="index.html">src/pages/Dashboard/Components</a> Notifications.vue
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>0/7</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">100% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>0/0</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>0/5</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>0/7</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line low'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135
+136
+137
+138
+139
+140
+141
+142
+143
+144
+145
+146
+147
+148
+149
+150
+151
+152
+153
+154
+155
+156
+157
+158
+159
+160
+161
+162
+163
+164
+165
+166
+167
+168
+169
+170
+171
+172
+173
+174
+175
+176
+177
+178
+179
+180
+181
+182
+183
+184
+185
+186
+187
+188
+189
+190
+191
+192
+193
+194
+195
+196
+197
+198
+199
+200
+201
+202
+203
+204
+205
+206
+207
+208
+209
+210
+211
+212
+213
+214
+215
+216
+217
+218
+219
+220
+221
+222
+223
+224
+225
+226
+227
+228
+229
+230
+231
+232
+233
+234
+235
+236
+237
+238
+239
+240
+241
+242</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">&lt;template&gt;
+  &lt;div&gt;
+    &lt;div class="header text-center"&gt;
+      &lt;h3 class="title"&gt;Notifications&lt;/h3&gt;
+      &lt;p class="category"&gt;Handcrafted by our friend
+        &lt;a target="_blank" href="https://github.com/mouse0270"&gt;Robert McIntosh&lt;/a&gt;. Please checkout the
+        &lt;a href="https://bootstrap-notify.remabledesigns.com/" target="_blank"&gt;full documentation.&lt;/a&gt;
+    &lt;/p&gt;
+    &lt;/div&gt;
+    &lt;div class="md-layout"&gt;
+      &lt;div class="md-layout-item md-size-50 md-small-size-100"&gt;
+        &lt;md-card&gt;
+          &lt;md-card-header&gt;
+            &lt;h4 class="title"&gt;Notifications Style&lt;/h4&gt;
+          &lt;/md-card-header&gt;
+          &lt;md-card-content&gt;
+            &lt;div class="alert alert-info"&gt;
+              &lt;span&gt;This is a plain notification&lt;/span&gt;
+            &lt;/div&gt;
+            &lt;div class="alert alert-info"&gt;
+              &lt;button type="button" aria-hidden="true" class="close"&gt;×&lt;/button&gt;
+              &lt;span&gt;This is a notification with close button.&lt;/span&gt;
+            &lt;/div&gt;
+            &lt;div class="alert alert-info alert-with-icon" data-notify="container"&gt;
+              &lt;button type="button" aria-hidden="true" class="close"&gt;×&lt;/button&gt;
+              &lt;i data-notify="icon" class="material-icons"&gt;add_alert&lt;/i&gt;
+              &lt;span data-notify="message"&gt;This is a notification with close button and icon and have many lines. You can see that the icon and the close button are always vertically aligned. This is a beautiful notification. So you don't have to worry about the style.&lt;/span&gt;
+            &lt;/div&gt;
+            &lt;div class="alert alert-rose alert-with-icon" data-notify="container"&gt;
+              &lt;button type="button" aria-hidden="true" class="close"&gt;×&lt;/button&gt;
+              &lt;i data-notify="icon" class="material-icons"&gt;add_alert&lt;/i&gt;
+              &lt;span data-notify="message"&gt;This is a notification with close button and icon and is made with ".alert-rose". You can see that the icon and the close button are always vertically aligned. This is a beautiful notification. So you don't have to worry about the style.&lt;/span&gt;
+            &lt;/div&gt;
+          &lt;/md-card-content&gt;
+        &lt;/md-card&gt;
+      &lt;/div&gt;
+      &lt;div class="md-layout-item md-size-50 md-small-size-100"&gt;
+        &lt;md-card&gt;
+          &lt;md-card-header&gt;
+            &lt;h4 class="title"&gt;Notification states&lt;/h4&gt;
+          &lt;/md-card-header&gt;
+&nbsp;
+          &lt;md-card-content&gt;
+            &lt;div class="alert alert-info"&gt;
+              &lt;button type="button" aria-hidden="true" class="close"&gt;×&lt;/button&gt;
+              &lt;span&gt;&lt;b&gt; Info - &lt;/b&gt; This is a regular notification made with ".alert-info"&lt;/span&gt;
+            &lt;/div&gt;
+            &lt;div class="alert alert-success"&gt;
+              &lt;button type="button" aria-hidden="true" class="close"&gt;×&lt;/button&gt;
+              &lt;span&gt;&lt;b&gt; Success - &lt;/b&gt; This is a regular notification made with ".alert-success"&lt;/span&gt;
+            &lt;/div&gt;
+            &lt;div class="alert alert-warning"&gt;
+              &lt;button type="button" aria-hidden="true" class="close"&gt;×&lt;/button&gt;
+              &lt;span&gt;&lt;b&gt; Warning - &lt;/b&gt; This is a regular notification made with ".alert-warning"&lt;/span&gt;
+            &lt;/div&gt;
+            &lt;div class="alert alert-danger"&gt;
+              &lt;button type="button" aria-hidden="true" class="close"&gt;×&lt;/button&gt;
+              &lt;span&gt;&lt;b&gt; Danger - &lt;/b&gt; This is a regular notification made with ".alert-danger"&lt;/span&gt;
+            &lt;/div&gt;
+            &lt;div class="alert alert-primary"&gt;
+              &lt;button type="button" aria-hidden="true" class="close"&gt;×&lt;/button&gt;
+              &lt;span&gt;&lt;b&gt; Primary - &lt;/b&gt; This is a regular notification made with ".alert-primary"&lt;/span&gt;
+            &lt;/div&gt;
+            &lt;div class="alert alert-rose"&gt;
+              &lt;button type="button" aria-hidden="true" class="close"&gt;×&lt;/button&gt;
+              &lt;span&gt;&lt;b&gt; Rose - &lt;/b&gt; This is a regular notification made with ".alert-rose"&lt;/span&gt;
+            &lt;/div&gt;
+          &lt;/md-card-content&gt;
+        &lt;/md-card&gt;
+      &lt;/div&gt;
+      &lt;div class="md-layout-item md-size-100"&gt;
+        &lt;md-card&gt;
+          &lt;md-card-header&gt;
+            &lt;h4 class="title text-center"&gt;Notifications Places
+              &lt;p class="category"&gt;Click to view notifications&lt;/p&gt;
+            &lt;/h4&gt;
+          &lt;/md-card-header&gt;
+&nbsp;
+          &lt;md-card-content&gt;
+            &lt;div class="places-buttons text-center"&gt;
+              &lt;md-button class="md-success" @click="notifyVue('top','left')"&gt;Top Left&lt;/md-button&gt;
+              &lt;md-button class="md-success" @click="notifyVue('top','center')"&gt;Top Center&lt;/md-button&gt;
+              &lt;md-button class="md-success" @click="notifyVue('top','right')"&gt;Top Right&lt;/md-button&gt;
+              &lt;md-button class="md-success" @click="notifyVue('bottom','left')"&gt;Bottom Left&lt;/md-button&gt;
+              &lt;md-button class="md-success" @click="notifyVue('bottom','center')"&gt;Bottom Center&lt;/md-button&gt;
+              &lt;md-button class="md-success" @click="notifyVue('bottom','right')"&gt;Bottom Right&lt;/md-button&gt;
+            &lt;/div&gt;
+&nbsp;
+&nbsp;
+            &lt;div class="text-center"&gt;
+              &lt;h5 class="text-center"&gt;Modals&lt;/h5&gt;
+              &lt;md-button class="md-primary md-round classic-modal" @click="classicModal = true"&gt;Classic Modal&lt;/md-button&gt;
+              &lt;modal v-if="classicModal" @close="classicModalHide"&gt;
+                &lt;template slot="header"&gt;
+                  &lt;h4 class="modal-title"&gt;Modal Title&lt;/h4&gt;
+                  &lt;md-button class="md-simple md-just-icon md-round modal-default-button" @click="classicModalHide"&gt;
+                    &lt;md-icon&gt;clear&lt;/md-icon&gt;
+                  &lt;/md-button&gt;
+                &lt;/template&gt;
+&nbsp;
+                &lt;template slot="body"&gt;
+                  &lt;p&gt;Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean. A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth. Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day however a small line of blind text by the name of Lorem Ipsum decided to leave for the far World of Grammar.&lt;/p&gt;
+                &lt;/template&gt;
+&nbsp;
+                &lt;template slot="footer"&gt;
+                  &lt;md-button class="md-simple"&gt;Nice Button&lt;/md-button&gt;
+                  &lt;md-button class="md-danger md-simple" @click="classicModalHide"&gt;Close&lt;/md-button&gt;
+                &lt;/template&gt;
+              &lt;/modal&gt;
+&nbsp;
+              &lt;md-button class="md-info md-round notice-modal" @click="noticeModal = true"&gt;Notice Modal&lt;/md-button&gt;
+              &lt;modal v-if="noticeModal" @close="noticeModalHide"&gt;
+                &lt;template slot="header"&gt;
+                  &lt;h4 class="modal-title"&gt;How Do You Become An Affiliate?&lt;/h4&gt;
+                  &lt;md-button class="md-simple md-just-icon md-round modal-default-button" @click="noticeModalHide"&gt;
+                    &lt;md-icon&gt;clear&lt;/md-icon&gt;
+                  &lt;/md-button&gt;
+                &lt;/template&gt;
+&nbsp;
+                &lt;template slot="body"&gt;
+                  &lt;div class="instruction"&gt;
+                      &lt;div class="md-layout"&gt;
+                          &lt;div class="md-layout-item md-size-66"&gt;
+                               &lt;strong&gt;1. Register&lt;/strong&gt;
+                               &lt;p class="description"&gt;The first step is to create an account at &lt;a href="https://www.creative-tim.com/"&gt;Creative Tim&lt;/a&gt;. You can choose a social network or go for the classic version, whatever works best for you.&lt;/p&gt;
+                          &lt;/div&gt;
+                          &lt;div class="md-layout-item"&gt;
+                              &lt;div class="picture"&gt;
+                                  &lt;img :src="registerImg" alt="Thumbnail Image"&gt;
+                              &lt;/div&gt;
+                          &lt;/div&gt;
+                      &lt;/div&gt;
+                  &lt;/div&gt;
+                  &lt;div class="instruction"&gt;
+                      &lt;div class="md-layout"&gt;
+                          &lt;div class="md-layout-item md-size-66"&gt;
+                                  &lt;strong&gt;2. Apply&lt;/strong&gt;
+                                  &lt;p class="description"&gt;The first step is to create an account at &lt;a href="https://www.creative-tim.com/"&gt;Creative Tim&lt;/a&gt;. You can choose a social network or go for the classic version, whatever works best for you.&lt;/p&gt;
+                          &lt;/div&gt;
+                          &lt;div class="md-layout-item"&gt;
+                              &lt;div class="picture"&gt;
+                                  &lt;img :src="applyImg" alt="Thumbnail Image"&gt;
+                              &lt;/div&gt;
+                          &lt;/div&gt;
+                      &lt;/div&gt;
+                  &lt;/div&gt;
+                  &lt;p&gt;If you have more questions, don't hesitate to contact us or send us a tweet @creativetim. We're here to help!&lt;/p&gt;
+                &lt;/template&gt;
+&nbsp;
+                &lt;template slot="footer"&gt;
+                  &lt;md-button class="md-info md-round" @click="noticeModalHide"&gt;Sound Good&lt;/md-button&gt;
+                &lt;/template&gt;
+              &lt;/modal&gt;
+&nbsp;
+              &lt;md-button class="md-rose md-round small-alert-modal" @click="smallAlertModal = true"&gt;Small Alert Modal&lt;/md-button&gt;
+              &lt;modal v-if="smallAlertModal" @close="smallAlertModalHide"&gt;
+                &lt;template slot="header"&gt;
+                  &lt;md-button class="md-simple md-just-icon md-round modal-default-button" @click="smallAlertModalHide"&gt;
+                    &lt;md-icon&gt;clear&lt;/md-icon&gt;
+                  &lt;/md-button&gt;
+                &lt;/template&gt;
+&nbsp;
+                &lt;template slot="body"&gt;
+                  &lt;p&gt;Are you sure you want to do this?&lt;/p&gt;
+                &lt;/template&gt;
+&nbsp;
+                &lt;template slot="footer"&gt;
+                  &lt;md-button class="md-simple" @click="smallAlertModalHide"&gt;Never Mind&lt;/md-button&gt;
+                  &lt;md-button class="md-success md-simple" &gt;Yes&lt;/md-button&gt;
+                &lt;/template&gt;
+              &lt;/modal&gt;
+            &lt;/div&gt;
+          &lt;/md-card-content&gt;
+        &lt;/md-card&gt;
+&nbsp;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/template&gt;
+&nbsp;
+&lt;script&gt;
+<span class="cstat-no" title="statement not covered" >import {Modal} from '@/components'</span>
+export default {
+  components: {
+    Modal
+  },
+  props: {
+    registerImg: {
+      type: String,
+      default: './img/card-1.jpg'
+    },
+    applyImg: {
+      type: String,
+      default: './img/card-2.jpg'
+    }
+  },
+<span class="fstat-no" title="function not covered" >  data () {</span>
+<span class="cstat-no" title="statement not covered" >    return {</span>
+      type: ['', 'info', 'success', 'warning', 'danger'],
+      notifications: {
+        topCenter: false
+      },
+      classicModal: false,
+      noticeModal: false,
+      smallAlertModal: false
+    }
+  },
+  methods: {
+<span class="fstat-no" title="function not covered" >    notifyVue (verticalAlign, horizontalAlign) {</span>
+<span class="cstat-no" title="statement not covered" >      var color = Math.floor((Math.random() * 4) + 1)</span>
+<span class="cstat-no" title="statement not covered" >      this.$notify(</span>
+        {
+          message: 'Welcome to &lt;b&gt;Vue Material Dashboard Pro&lt;/b&gt; - a beautiful admin panel for every web developer.',
+          icon: 'add_alert',
+          horizontalAlign: horizontalAlign,
+          verticalAlign: verticalAlign,
+          type: this.type[color]
+        })
+    },
+<span class="fstat-no" title="function not covered" >    classicModalHide: function(){</span>
+<span class="cstat-no" title="statement not covered" >      this.classicModal = false</span>
+    },
+<span class="fstat-no" title="function not covered" >    noticeModalHide: function(){</span>
+<span class="cstat-no" title="statement not covered" >      this.noticeModal = false</span>
+    },
+<span class="fstat-no" title="function not covered" >    smallAlertModalHide: function(){</span>
+<span class="cstat-no" title="statement not covered" >      this.smallAlertModal = false</span>
+    }
+  }
+}
+&nbsp;
+&lt;/script&gt;
+&lt;style lang="scss"&gt;
+  .text-center {
+    text-align: center;
+  }
+&nbsp;
+  .places-buttons + div .md-button:not(:last-child) {
+    margin-right: 5px;
+  }
+&lt;/style&gt;
+&nbsp;</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Mon Oct 15 2018 16:40:13 GMT+0530 (India Standard Time)
+</div>
+</div>
+<script src="..\..\..\..\prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="..\..\..\..\sorter.js"></script>
+</body>
+</html>

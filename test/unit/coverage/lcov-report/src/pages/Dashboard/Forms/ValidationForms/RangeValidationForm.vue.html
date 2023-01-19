@@ -1,0 +1,779 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for src/pages/Dashboard/Forms/ValidationForms/RangeValidationForm.vue</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="..\..\..\..\..\prettify.css" />
+    <link rel="stylesheet" href="..\..\..\..\..\base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(..\..\..\..\..\sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="..\..\..\..\..\index.html">All files</a> / <a href="index.html">src/pages/Dashboard/Forms/ValidationForms</a> RangeValidationForm.vue
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>0/10</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">100% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>0/0</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>0/8</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>0/10</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line low'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135
+136
+137
+138
+139
+140
+141
+142
+143
+144
+145
+146
+147
+148
+149
+150
+151
+152
+153
+154
+155
+156
+157
+158
+159
+160
+161
+162
+163
+164
+165
+166
+167
+168
+169
+170
+171
+172
+173
+174
+175
+176
+177
+178
+179
+180
+181
+182
+183
+184
+185
+186
+187
+188
+189
+190
+191
+192
+193
+194
+195
+196
+197
+198
+199
+200
+201
+202
+203
+204
+205
+206
+207
+208
+209
+210
+211
+212
+213
+214
+215
+216
+217
+218
+219
+220
+221
+222
+223
+224
+225
+226
+227
+228
+229
+230
+231
+232
+233
+234
+235
+236
+237
+238
+239</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">&lt;template&gt;
+  &lt;form&gt;
+    &lt;md-card&gt;
+      &lt;md-card-header class="md-card-header-text md-card-header-green"&gt;
+        &lt;div class="card-text"&gt;
+          &lt;h4 class="title"&gt;Range Validation&lt;/h4&gt;
+        &lt;/div&gt;
+      &lt;/md-card-header&gt;
+&nbsp;
+      &lt;md-card-content&gt;
+        &lt;div class="md-layout"&gt;
+          &lt;label class="md-layout-item md-size-20 md-form-label"&gt;
+            Min Length
+          &lt;/label&gt;
+          &lt;div class="md-layout-item"&gt;
+            &lt;md-field :class="[
+              {'md-valid': !errors.has('minLength') &amp;&amp; touched.minLength},
+              {'md-error': errors.has('minLength')}]"&gt;
+              &lt;md-input
+                v-model="minLength"
+                data-vv-name="minLength"
+                type="text"
+                name="minLength"
+                required
+                v-validate="modelValidations.minLength"&gt;
+              &lt;/md-input&gt;
+              &lt;slide-y-down-transition&gt;
+                &lt;md-icon class="error" v-show="errors.has('minLength')"&gt;close&lt;/md-icon&gt;
+              &lt;/slide-y-down-transition&gt;
+              &lt;slide-y-down-transition&gt;
+                &lt;md-icon class="success" v-show="!errors.has('minLength') &amp;&amp; touched.minLength"&gt;done&lt;/md-icon&gt;
+              &lt;/slide-y-down-transition&gt;
+            &lt;/md-field&gt;
+          &lt;/div&gt;
+          &lt;label class="md-layout-item md-size-20 md-label-on-right"&gt;
+            &lt;code&gt;minLength="5"&lt;/code&gt;
+          &lt;/label&gt;
+        &lt;/div&gt;
+        &lt;div class="md-layout"&gt;
+          &lt;label class="md-layout-item md-size-20 md-form-label"&gt;
+            Max Length
+          &lt;/label&gt;
+          &lt;div class="md-layout-item"&gt;
+            &lt;md-field :class="[
+              {'md-valid': !errors.has('maxLength') &amp;&amp; touched.maxLength},
+              {'md-error': errors.has('maxLength')}]"&gt;
+              &lt;md-input
+                v-model="maxLength"
+                data-vv-name="maxLength"
+                type="text"
+                name="maxLength"
+                required
+                v-validate="modelValidations.maxLength"&gt;
+              &lt;/md-input&gt;
+              &lt;slide-y-down-transition&gt;
+                &lt;md-icon class="error" v-show="errors.has('maxLength')"&gt;close&lt;/md-icon&gt;
+              &lt;/slide-y-down-transition&gt;
+              &lt;slide-y-down-transition&gt;
+                &lt;md-icon class="success" v-show="!errors.has('maxLength') &amp;&amp; touched.maxLength"&gt;done&lt;/md-icon&gt;
+              &lt;/slide-y-down-transition&gt;
+            &lt;/md-field&gt;
+          &lt;/div&gt;
+          &lt;label class="md-layout-item md-size-20 md-label-on-right"&gt;
+            &lt;code&gt;maxLength="5"&lt;/code&gt;
+          &lt;/label&gt;
+        &lt;/div&gt;
+        &lt;div class="md-layout"&gt;
+          &lt;label class="md-layout-item md-size-20 md-form-label"&gt;
+            Range
+          &lt;/label&gt;
+          &lt;div class="md-layout-item"&gt;
+            &lt;md-field :class="[
+              {'md-valid': !errors.has('range') &amp;&amp; touched.range},
+              {'md-error': errors.has('range')}]"&gt;
+              &lt;md-input
+                v-model="range"
+                data-vv-name="range"
+                type="text"
+                name="range"
+                required
+                v-validate="modelValidations.range"&gt;
+              &lt;/md-input&gt;
+              &lt;slide-y-down-transition&gt;
+                &lt;md-icon class="error" v-show="errors.has('range')"&gt;close&lt;/md-icon&gt;
+              &lt;/slide-y-down-transition&gt;
+              &lt;slide-y-down-transition&gt;
+                &lt;md-icon class="success" v-show="!errors.has('range') &amp;&amp; touched.range"&gt;done&lt;/md-icon&gt;
+              &lt;/slide-y-down-transition&gt;
+            &lt;/md-field&gt;
+          &lt;/div&gt;
+          &lt;label class="md-layout-item md-size-20 md-label-on-right"&gt;
+            &lt;code&gt;range="[6,10]"&lt;/code&gt;
+          &lt;/label&gt;
+        &lt;/div&gt;
+        &lt;div class="md-layout"&gt;
+          &lt;label class="md-layout-item md-size-20 md-form-label"&gt;
+            Min Value
+          &lt;/label&gt;
+          &lt;div class="md-layout-item"&gt;
+            &lt;md-field :class="[
+              {'md-valid': !errors.has('minValue') &amp;&amp; touched.minValue},
+              {'md-error': errors.has('minValue')}]"&gt;
+              &lt;md-input
+                v-model="minValue"
+                data-vv-name="minValue"
+                type="text"
+                name="minValue"
+                required
+                v-validate="modelValidations.minValue"&gt;
+              &lt;/md-input&gt;
+              &lt;slide-y-down-transition&gt;
+                &lt;md-icon class="error" v-show="errors.has('minValue')"&gt;close&lt;/md-icon&gt;
+              &lt;/slide-y-down-transition&gt;
+              &lt;slide-y-down-transition&gt;
+                &lt;md-icon class="success" v-show="!errors.has('minValue') &amp;&amp; touched.minValue"&gt;done&lt;/md-icon&gt;
+              &lt;/slide-y-down-transition&gt;
+            &lt;/md-field&gt;
+          &lt;/div&gt;
+          &lt;label class="md-layout-item md-size-20 md-label-on-right"&gt;
+            &lt;code&gt;min="6"&lt;/code&gt;
+          &lt;/label&gt;
+        &lt;/div&gt;
+        &lt;div class="md-layout"&gt;
+          &lt;label class="md-layout-item md-size-20 md-form-label"&gt;
+            Max Value
+          &lt;/label&gt;
+          &lt;div class="md-layout-item"&gt;
+            &lt;md-field :class="[
+              {'md-valid': !errors.has('maxValue') &amp;&amp; touched.maxValue},
+              {'md-error': errors.has('maxValue')}]"&gt;
+              &lt;md-input
+                v-model="maxValue"
+                data-vv-name="maxValue"
+                type="text"
+                name="maxValue"
+                required
+                v-validate="modelValidations.maxValue"&gt;
+              &lt;/md-input&gt;
+              &lt;slide-y-down-transition&gt;
+                &lt;md-icon class="error" v-show="errors.has('maxValue')"&gt;close&lt;/md-icon&gt;
+              &lt;/slide-y-down-transition&gt;
+              &lt;slide-y-down-transition&gt;
+                &lt;md-icon class="success" v-show="!errors.has('maxValue') &amp;&amp; touched.maxValue"&gt;done&lt;/md-icon&gt;
+              &lt;/slide-y-down-transition&gt;
+            &lt;/md-field&gt;
+          &lt;/div&gt;
+          &lt;label class="md-layout-item md-size-20 md-label-on-right"&gt;
+            &lt;code&gt;max="6"&lt;/code&gt;
+          &lt;/label&gt;
+        &lt;/div&gt;
+      &lt;/md-card-content&gt;
+&nbsp;
+      &lt;md-card-actions class="text-center"&gt;
+        &lt;md-button native-type="submit" @click.native.prevent="validate" class="md-success"&gt;Validate Inputs&lt;/md-button&gt;
+      &lt;/md-card-actions&gt;
+    &lt;/md-card&gt;
+  &lt;/form&gt;
+&lt;/template&gt;
+&lt;script&gt;
+<span class="cstat-no" title="statement not covered" >import { SlideYDownTransition } from 'vue2-transitions'</span>
+export default {
+  components: {
+    SlideYDownTransition
+  },
+<span class="fstat-no" title="function not covered" >  data () {</span>
+<span class="cstat-no" title="statement not covered" >    return {</span>
+      minLength: '',
+      maxLength: '',
+      range: '',
+      minValue: '',
+      maxValue: '',
+      touched: {
+        minLength: false,
+        maxLength: false,
+        range: false,
+        minValue: false,
+        maxValue: false
+      },
+      modelValidations: {
+        minLength: {
+          required: true,
+          min: 5
+        },
+        maxLength: {
+          required: true,
+          max: 5
+        },
+        range: {
+          required: true,
+          min: 6,
+          max: 10
+        },
+        minValue: {
+          required: true,
+          min_value: 6
+        },
+        maxValue: {
+          required: true,
+          max_value: 6
+        }
+      }
+    }
+  },
+  methods: {
+<span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >    validate () {</span></span>
+<span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >      this.$validator.validateAll().then(isValid =&gt; {</span></span>
+<span class="cstat-no" title="statement not covered" >        this.$emit('on-submit', this.registerForm, isValid)</span>
+      })
+    }
+  },
+  watch: {
+<span class="fstat-no" title="function not covered" >    minLength () {</span>
+<span class="cstat-no" title="statement not covered" >      this.touched.minLength = true</span>
+    },
+<span class="fstat-no" title="function not covered" >    maxLength () {</span>
+<span class="cstat-no" title="statement not covered" >      this.touched.maxLength = true</span>
+    },
+<span class="fstat-no" title="function not covered" >    range () {</span>
+<span class="cstat-no" title="statement not covered" >      this.touched.range = true</span>
+    },
+<span class="fstat-no" title="function not covered" >    minValue () {</span>
+<span class="cstat-no" title="statement not covered" >      this.touched.minValue = true</span>
+    },
+<span class="fstat-no" title="function not covered" >    maxValue () {</span>
+<span class="cstat-no" title="statement not covered" >      this.touched.maxValue = true</span>
+    }
+  }
+}
+&lt;/script&gt;
+&lt;style lang="scss" scoped&gt;
+.md-card .md-card-actions{
+  border: none;
+}
+&nbsp;
+.text-center{
+  justify-content: center !important;
+}
+&lt;/style&gt;
+&nbsp;</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Mon Oct 15 2018 16:40:13 GMT+0530 (India Standard Time)
+</div>
+</div>
+<script src="..\..\..\..\..\prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="..\..\..\..\..\sorter.js"></script>
+</body>
+</html>

@@ -1,0 +1,22 @@
+[
+    {
+        "name": "India",
+        "dial_code": "+91",
+        "code": "IN"
+    },
+    {
+        "name": "Australia",
+        "dial_code": "+61",
+        "code": "AU"
+    },
+    {
+        "name": "United Kingdom",
+        "dial_code": "+44",
+        "code": "GB"
+    },
+    {
+        "name": "United States",
+        "dial_code": "+1",
+        "code": "US"
+    }
+]

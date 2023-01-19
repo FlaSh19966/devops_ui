@@ -1,0 +1,671 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for src/pages/Dashboard/Pages/Register.vue</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="..\..\..\..\prettify.css" />
+    <link rel="stylesheet" href="..\..\..\..\base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(..\..\..\..\sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="..\..\..\..\index.html">All files</a> / <a href="index.html">src/pages/Dashboard/Pages</a> Register.vue
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>0/40</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>0/23</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>0/9</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>0/40</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line low'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135
+136
+137
+138
+139
+140
+141
+142
+143
+144
+145
+146
+147
+148
+149
+150
+151
+152
+153
+154
+155
+156
+157
+158
+159
+160
+161
+162
+163
+164
+165
+166
+167
+168
+169
+170
+171
+172
+173
+174
+175
+176
+177
+178
+179
+180
+181
+182
+183
+184
+185
+186
+187
+188
+189
+190
+191
+192
+193
+194
+195
+196
+197
+198
+199
+200
+201
+202
+203</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">&lt;template&gt;
+  &lt;div class="md-layout"&gt;
+&nbsp;
+    &lt;div class="md-layout-item"&gt;
+      &lt;signup-card header-color="green"&gt;
+        &lt;h3 slot="title" class="title" style="color:#FFFFFF;margin-top:25px"&gt;Register&lt;/h3&gt;
+&nbsp;
+        &lt;div class="md-layout-item md-size-50 md-medium-size-50 md-small-size-100 ml-auto mr-auto" 
+        slot="content-left" style="min-width: 80%;max-width: 100%;"&gt;
+          
+          &lt;md-field class="md-form-group"&gt;       
+            &lt;md-icon&gt;business&lt;/md-icon&gt;
+            &lt;label&gt;Company Name.....&lt;/label&gt;
+            &lt;md-input v-model="user.company_name" type="text"&gt;&lt;/md-input&gt;
+          &lt;/md-field&gt;
+          &lt;div @click="domain_api()"&gt;
+          &lt;md-field class="md-form-group"&gt;       
+            &lt;md-icon&gt;business&lt;/md-icon&gt;
+            
+            &lt;label for="company"&gt;Domain Name&lt;/label&gt;
+          &lt;md-select v-model="user.domain" style="margin-left: 12px;"&gt;
+            &lt;md-option v-for="(company, index) in companies" :key="index" 
+            :value="company"&gt;{{ company }}&lt;/md-option&gt;
+          &lt;/md-select&gt;
+          
+            &lt;!-- &lt;div style="width: -webkit-fill-available;" @click="domain_api()"&gt;
+            &lt;v-select :options="companies" style="width: -webkit-fill-available;margin-left:5px;" placeholder="Domain Name" v-model="user.domain"&gt;
+            &lt;/v-select&gt;&lt;/div&gt; --&gt;
+          &lt;/md-field&gt;
+          &lt;/div&gt;
+          &lt;md-field class="md-form-group"&gt;
+            &lt;md-icon&gt;vpn_key&lt;/md-icon&gt;
+            &lt;label&gt;License Key&lt;/label&gt;
+                    &lt;md-input v-model="license_key" disabled&gt;&lt;/md-input&gt;
+          &lt;/md-field&gt;
+&nbsp;
+          &lt;md-field class="md-form-group"&gt;
+            &lt;md-icon&gt;email&lt;/md-icon&gt;
+            &lt;label&gt;Email...&lt;/label&gt;
+                    &lt;md-input v-model="user.email" type="text"&gt;&lt;/md-input&gt;
+          &lt;/md-field&gt; 
+&nbsp;
+          &lt;md-field class="md-form-group"&gt;
+            &lt;md-icon&gt;lock_outline&lt;/md-icon&gt;
+            &lt;label&gt;Password....&lt;/label&gt;
+            &lt;md-input v-model="user.password" type="password"  @keyup.enter="create()"&gt;&lt;/md-input&gt;
+          &lt;/md-field&gt;
+          &lt;span style="color:#FF0000;" v-if="validPassword!=true &amp;&amp; user.password!=''"&gt;{{ validPassword }}&lt;/span&gt;
+          
+          &lt;div class="button-container"&gt;
+            &lt;md-button href class="md-success md-round mt-4" slot="footer" @click="create()"&gt;Register&lt;/md-button&gt;
+          &lt;/div&gt;
+&nbsp;
+        &lt;/div&gt;
+      &lt;/signup-card&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/template&gt;
+&lt;script&gt;
+<span class="cstat-no" title="statement not covered" >  import {SignupCard} from '@/components'</span>
+  import {LoginCard} from '@/components'
+<span class="cstat-no" title="statement not covered" >  import swal from 'sweetalert2'</span>
+<span class="cstat-no" title="statement not covered" >  import VeeValidate from 'vee-validate'</span>
+<span class="cstat-no" title="statement not covered" >  import axios from 'axios'</span>
+  export default {
+    components: {
+      SignupCard,
+      VeeValidate,
+      LoginCard,
+    },
+<span class="fstat-no" title="function not covered" >    data () {</span>
+<span class="cstat-no" title="statement not covered" >      return {</span>
+        license_key: Math.random().toString(36).substring(2, 15) + Math.random().toString(36).substring(2, 15) + "  (Trial Key)",
+        user: {
+        company_name: '',
+        email: '',
+        password: '',
+        domain: '',
+        },
+        companies: [],
+        domain_url: process.env.DOMAIN_NAME_URL,
+        url: process.env.REGISTER_URL,
+        reg_pwd: /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[$@$!%*?&amp;])[A-Za-z\d$@$!%*?&amp;]{8,}/,
+        reg_email: /^([0-9a-zA-Z]([-.\w]*[0-9a-zA-Z])*@([0-9a-zA-Z][-\w]*[0-9a-zA-Z]\.)+[a-zA-Z]{2,9})$/,
+        reg_error: "E11000",
+        unique: false,
+      }
+    },
+    computed: {
+<span class="fstat-no" title="function not covered" >      validEmail () {</span>
+<span class="cstat-no" title="statement not covered" >        if((this.reg_email).test(this.user.email)) {</span>
+<span class="cstat-no" title="statement not covered" >          return true;</span>
+        }
+        else {
+<span class="cstat-no" title="statement not covered" >          return false</span>
+        }
+      },
+<span class="fstat-no" title="function not covered" >      valid_cname () {</span>
+<span class="cstat-no" title="statement not covered" >        if((this.user.company_name)!='') {</span>
+<span class="cstat-no" title="statement not covered" >          return true;</span>
+        }
+        else {
+<span class="cstat-no" title="statement not covered" >          return false;</span>
+          }
+        },
+<span class="fstat-no" title="function not covered" >      validPassword () {</span>
+<span class="cstat-no" title="statement not covered" >        if((this.reg_pwd).test(this.user.password)) {</span>
+<span class="cstat-no" title="statement not covered" >          return true;</span>
+        }
+        else {
+<span class="cstat-no" title="statement not covered" >          return 'Password must contain minimum 8 characters, atleast 1 UpperCase Alphabet, 1 LowerCase Alphabet, 1 Number and 1 Special Character'</span>
+        }
+      },
+    },
+    methods: { 
+<span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >      domain_api() {</span></span>
+<span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >        axios.get(this.domain_url).then(response =&gt; {</span></span>
+<span class="cstat-no" title="statement not covered" >          this.companies = []</span>
+<span class="cstat-no" title="statement not covered" >          for(var i in response.data){</span>
+<span class="cstat-no" title="statement not covered" >            this.companies.push(response.data[i])</span>
+          }
+        })
+      },
+<span class="fstat-no" title="function not covered" >      create () {</span>
+<span class="cstat-no" title="statement not covered" >        if((this.validEmail) &amp;&amp; (this.validPassword==true) &amp;&amp; (this.valid_cname)) {</span>
+<span class="cstat-no" title="statement not covered" >          this.call_api();</span>
+<span class="cstat-no" title="statement not covered" >        }</span>
+        else if(!(this.valid_cname)){
+<span class="cstat-no" title="statement not covered" >          swal({ </span>
+            type: 'error',
+            position: 'top-right',
+            text: 'Company Name is required',
+            showConfirmButton: false,
+            timer: 1000,
+            });
+<span class="cstat-no" title="statement not covered" >          }</span>
+          else if(!(this.validEmail)){
+<span class="cstat-no" title="statement not covered" >            swal({ </span>
+            type: 'error',
+                        text: 'Please enter a valid email',
+                        showConfirmButton: false,
+                        timer: 1000,
+                        });
+<span class="cstat-no" title="statement not covered" >          }</span>
+          else if((this.user.password=='')){
+<span class="cstat-no" title="statement not covered" >            swal({ </span>
+            type: 'error',
+                        text: 'Password field is blank',
+                        showConfirmButton: false,
+                        timer: 1000,
+                        });
+          }
+        },
+<span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >      call_api () {</span></span>
+<span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >         axios.post(this.url, this.user).then(response =&gt; </span></span>
+         {
+<span class="cstat-no" title="statement not covered" >        if((response.data) == "Registered Successfully") {</span>
+<span class="cstat-no" title="statement not covered" >          swal({</span>
+          position: 'top-center',
+          width: '100px',
+          title: '&lt;h4&gt;Account created successfully!!&lt;br&gt;Kindly check your e-mail for account validation&lt;/h4&gt;',
+          type: "success"
+        });
+<span class="cstat-no" title="statement not covered" >        }</span>
+        else if((response.data).includes("This email is duplicate")){
+<span class="cstat-no" title="statement not covered" >        swal({ </span>
+            type: 'error',
+            text: response.data,
+            });
+<span class="cstat-no" title="statement not covered" >        }</span>
+        else if((response.data).includes("unsuccessful registeration")){
+<span class="cstat-no" title="statement not covered" >        swal({ </span>
+            type: 'error',
+            text: "Your registration was unsuccessful. Please try again.",
+            });
+        }
+        else {
+<span class="cstat-no" title="statement not covered" >        swal({ </span>
+            type: 'error',
+            text: "Cannot register your account",
+            showConfirmButton: false,
+            timer: 1000
+            });
+        }
+<span class="cstat-no" title="statement not covered" >      this.user.email = '';</span>
+<span class="cstat-no" title="statement not covered" >      this.user.company_name = '';</span>
+<span class="cstat-no" title="statement not covered" >      this.user.password = '';</span>
+<span class="cstat-no" title="statement not covered" >      this.user.domain = '';</span>
+         });
+      },
+&nbsp;
+    }
+  }
+&nbsp;
+&lt;/script&gt;
+&nbsp;
+&lt;style&gt;
+.swal2-popup
+{
+  max-width: 400px !important;
+}
+&lt;/style&gt;
+&nbsp;</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Tue Oct 30 2018 12:50:24 GMT+0530 (India Standard Time)
+</div>
+</div>
+<script src="..\..\..\..\prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="..\..\..\..\sorter.js"></script>
+</body>
+</html>

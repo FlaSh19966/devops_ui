@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="116.155" height="112.5" viewBox="0 0 116.155 112.5">
+  <defs>
+    <clipPath id="clip-Artboard_6">
+      <rect width="116.155" height="112.5"/>
+    </clipPath>
+  </defs>
+  <g id="Artboard_6" data-name="Artboard 6" clip-path="url(#clip-Artboard_6)">
+    <rect width="116.155" height="112.5" fill="#fff"/>
+    <g id="Group_2" data-name="Group 2" transform="translate(-830.776)">
+      <path id="Path_3" data-name="Path 3" d="M926.85,82.594a39.653,39.653,0,0,1-6.776,8.639" fill="none" stroke="#6d6d6d" stroke-miterlimit="10" stroke-width="7"/>
+      <path id="Path_4" data-name="Path 4" d="M890.26,104.276a12.449,12.449,0,0,1-1.778.085,44.806,44.806,0,1,1,22.784-83.343" fill="none" stroke="#6d6d6d" stroke-miterlimit="10" stroke-width="7"/>
+      <path id="Path_5" data-name="Path 5" d="M933.2,61.588a42.18,42.18,0,0,1-1.864,10.926" fill="none" stroke="#6d6d6d" stroke-miterlimit="10" stroke-width="7"/>
+      <path id="Path_6" data-name="Path 6" d="M911.35,98.009A39.685,39.685,0,0,1,901.1,102.5" fill="none" stroke="#6d6d6d" stroke-miterlimit="10" stroke-width="7"/>
+      <path id="Path_7" data-name="Path 7" d="M887.141,35.762V61.4a4.1,4.1,0,0,0,1.048,2.738L902.416,80" fill="none" stroke="#6d6d6d" stroke-linecap="round" stroke-miterlimit="10" stroke-width="7"/>
+    </g>
+  </g>
+</svg>

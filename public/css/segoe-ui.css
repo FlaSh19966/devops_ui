@@ -1,0 +1,473 @@
+@font-face {
+    font-family: 'Segoe UI Bold';
+    src: url(../fonts/Segoe\ UI\ Bold.woff2);
+}
+
+@font-face {
+    font-family: 'Segoe UI';
+    src: url(../fonts/Segoe\ UI.woff);
+}
+
+@font-face {
+    font-family: 'Segoe UI Semibold';
+    src: url(../fonts/Segoe\ UI\ Semibold.woff2);
+}
+
+/* body {
+    font-family: inherit;
+} */
+
+.tui-full-calendar-time-date.tui-full-calendar-today {
+    background-color: none !important;
+}
+
+.scheduler-modal-content {
+    width: 100% !important;
+    border-radius: 21px;
+}
+
+.scheduler-create-modal {
+    width: 415px !important;
+    border-radius: 21px;
+}
+
+.scheduler-settings-modal {
+    width: 1049px !important;
+    border-radius: 21px;
+}
+
+.scheduler-create-modal .modal-head,
+.scheduler-settings-modal .modal-head {
+    height: 60px;
+    border-bottom: 1px solid #EAEAEA;
+    margin-bottom: 15px;
+}
+
+.scheduler-create-modal .scheduler-modal-title,
+.scheduler-settings-modal .scheduler-modal-title {
+    top: 15px;
+    left: 30px;
+    position: absolute;
+}
+
+.scheduler-create-modal .close,
+.scheduler-settings-modal .close {
+    top: 20px;
+    right: 20px;
+}
+
+.scheduler-modal-title {
+    font: 20px/27px "Segoe UI Bold";
+    color: #283877;
+}
+
+
+.title-box {
+    width: 88px;
+    height: 88px;
+    border-radius: 50%;
+    background-color: #273679;
+    opacity: 1;
+    color: #ffffff;
+    position: relative;
+}
+
+.title-box .title-txt {
+    font-family: 'Segoe UI Semibold';
+    text-align: center;
+    vertical-align: middle;
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    font-size: 300%;
+    line-height: 75px;
+}
+
+.appointment-title {
+    color: #273679;
+    font: 21px "Segoe UI Semibold";
+    text-align: center;
+}
+
+.scheduler-row {
+    border-bottom: 1px solid #EAEAEA;
+}
+
+.scheduler-row:last-child {
+    border-bottom: none;
+}
+
+.scheduler-col:nth-child(1) {
+    border-right: 1px solid #EAEAEA;
+}
+
+.scheduler-col .card {
+    border: none;
+    padding: 0.6rem;
+}
+
+.scheduler-col .card-title {
+    font: 16px "Segoe UI Semibold";
+    color: #333333;
+}
+
+.scheduler-col .card-subtitle {
+    font: 16px "Segoe UI";
+    color: #5E5E5E;
+}
+
+.create-schedule-input>input,
+.create-schedule-input>select {
+    width: 352px;
+    height: 44px;
+    margin-left: 0;
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    border: 1px solid #EAEAEA;
+    border-radius: 25px;
+}
+
+.create-schedule-input>select,
+.create-schedule-settings>select {
+    -webkit-appearance: none !important;
+    background: url(/img/Path\ 225.svg) no-repeat right #FFFFFF !important;
+    background-position-x: 90% !important;
+}
+
+.create-schedule-input>input::placeholder,
+.create-schedule-input option {
+    height: 17px;
+    text-align: left;
+    font: 13px/17px "Segoe UI";
+    letter-spacing: 0px;
+}
+
+.create-schedule-settings>input,
+.create-schedule-settings>select {
+    width: 352px;
+    height: 44px;
+    margin-left: 0;
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    border: 1px solid #EAEAEA;
+    border-radius: 25px;
+    color: #A1A1A1;
+}
+
+.create-schedule-settings>input::placeholder,
+.create-schedule-settings option {
+    height: 17px;
+    text-align: left;
+    font: 13px/17px "Segoe UI";
+    letter-spacing: 0px;
+}
+
+.scheduler-create-modal .required-box,
+.scheduler-settings-modal .required-box {
+    width: 30px;
+    height: 44px;
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    border: 1px solid #EAEAEA;
+    border-right: none;
+    border-top: none;
+    border-bottom: none;
+    text-align: center;
+    padding: 10px;
+    border-radius: 0px 22px 22px 0px;
+    opacity: 1;
+    right: 0;
+    position: absolute;
+    -moz-background-clip: content;
+    /* Firefox 3.6 */
+    -webkit-background-clip: content;
+    /* Safari 4? Chrome 6? */
+    background-clip: content-box;
+    /* Firefox 4, Safari 5, Opera 10, IE 9 */
+}
+
+.scheduler-create-modal .required-box.disabled {
+    background: #e9ecef;
+}
+
+.scheduler-create-modal .required-box .required-text {
+    width: 5px;
+    height: 17px;
+    text-align: left;
+    line-height: 45px;
+    font: 13px/17px "Segoe UI";
+    letter-spacing: 0px;
+    color: #FF3603;
+    opacity: 1;
+}
+
+.day-list-box {
+    color: #959595;
+}
+
+.day-list-box .day-box {
+    font: 9px/12px "Segoe UI";
+    width: 26px;
+    height: 26px;
+}
+
+.day-list-box .date-box {
+    width: 26px;
+    height: 26px;
+    font: 14px/19px "Segoe UI";
+    cursor: pointer;
+}
+
+.day-list-box .date-box.active {
+    border-radius: 50%;
+    background: #FF3F3F 0% 0% no-repeat padding-box;
+    color: #ffffff;
+    line-height: 25px;
+    margin-top: -3px;
+}
+
+.working-hrs-row {
+    border: 0.5px solid #EAEAEA;
+    border-radius: 14px;
+}
+
+.working-hrs-title {
+    font: 13px/17px "Segoe UI Bold";
+    text-transform: uppercase;
+    text-align: center;
+    margin: 30px 0;
+    color: #A1A1A1;
+    font-weight: 900;
+    letter-spacing: 0rem;
+}
+
+.workday-box {
+    border: 1px solid #EAEAEA;
+    border-radius: 7px;
+    height: 120px;
+    margin: 0px 15px 30px 15px;
+    width: 290px;
+    color: #A1A1A1;
+}
+
+.custom-settings-box {
+    border: 1px solid #EAEAEA;
+    border-radius: 7px;
+    height: 74px;
+    margin: 37px 15px 30px 9px;
+    width: 230px;
+    font: 13px/17px "Segoe UI";
+    letter-spacing: 0px;
+    color: #A1A1A1;
+}
+
+.custom-settings-box.ml-0.my-auto {
+    width: 80%;
+}
+
+.custom-settings-box.mr-0.my-auto {
+    width: 17%;
+}
+
+.custom-settings-box input {
+    width: 95px;
+    height: 36px;
+}
+
+.custom-settings-box .required-box {
+    height: 36px;
+}
+
+.custom-settings-box input[type="file"],
+.custom-settings-box textarea {
+    width: 198px;
+    height: 36px;
+}
+
+.scheduler-settings-modal .custom-settings-box textarea {
+    padding: 6px !important;
+    width: 97%;
+    margin-left: 1.5%;
+    margin-right: 1.5%;
+    height: 90px;
+}
+
+.custom-settings-box label[for="inputGroupFile01"] {
+    border-radius: 25px;
+    font-weight: 400;
+    height: 40px;
+}
+
+.scheduler-settings-modal .custom-file-label::after {
+    height: 100% !important;
+    font: 13px/1.75 "Segoe UI";
+    color: #A1A1A1;
+    background-color: #EAEAEA;
+    border-radius: 0px 25px 25px 0px;
+}
+
+.scheduler-settings-modal .custom-file {
+    width: calc(100% - 24px);
+    margin-left: 12px;
+}
+
+.workday-box-title {
+    top: -12px;
+    left: 12px;
+    height: fit-content;
+    position: relative;
+    background-color: #FFFFFF;
+}
+
+.workday-box-add-slot {
+    left: 200px;
+    height: fit-content;
+    position: relative;
+    background-color: #FFFFFF;
+    cursor: pointer;
+}
+
+.time-slots-title {
+    font: 17px "Segoe UI";
+    letter-spacing: 0px;
+    color: #A1A1A1;
+    opacity: 1;
+    border-bottom: 1px solid #EAEAEA;
+}
+
+.time-slot {
+    font: 13px/1.75 "Segoe UI";
+    border: 0.5px solid #C7C7C7;
+    border-radius: 5px;
+    width: 70px;
+    height: 26px;
+    color: #A1A1A1;
+    text-align: center;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.time-slot.active {
+    background-color: #273679;
+    color: #ffffff;
+}
+
+.tui-full-calendar-dayname:last-child() {
+    border-right: 1px solid #DFDFDF;
+}
+
+.tui-full-calendar-dayname-container {
+    overflow-y: hidden !important;
+    padding-right: 14px;
+    border-right: 1px solid rgb(229, 229, 229);
+}
+
+.tui-full-calendar-weekday-schedule-bullet {
+    background: #FF3F3F !important;
+}
+
+.tui-full-calendar-weekday-schedule.tui-full-calendar-weekday-schedule-time .tui-full-calendar-weekday-schedule-title {
+    border: 1px solid #FF3F3F;
+    border-radius: 3px;
+    color: #283877;
+    padding-left: 0px !important;
+    margin-left: 9px;
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    box-shadow: 0px 1px 5px #00000029;
+}
+
+.tui-full-calendar-weekday-schedule.tui-full-calendar-weekday-schedule-time {
+    margin-left: -3px !important;
+}
+
+.tui-full-calendar-dayname .tui-full-calendar-dayname-date-area {
+    line-height: 300% !important;
+    font: 10px/14px "Segoe UI Semibold";
+    letter-spacing: 0px;
+    color: #959595 !important;
+}
+
+.reminder-btn {
+    font-size: 14px;
+    color: #fff;
+    background: #0F9700;
+    border: solid 1px #009900;
+    padding: 6px 15px;
+    font-weight: 400;
+    line-height: 20px;
+    display: inline-block;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.reminder-btn:hover {
+    background: none;
+    color: #0F9700;
+}
+
+.custom-scheduler-select {
+    width: 90px;
+    position: relative;
+    font-family: Arial;
+    font: 13px/17px "Segoe UI Semibold";
+    letter-spacing: 0px;
+    color: #959595;
+}
+
+.custom-scheduler-select select {
+    display: none;
+    /*hide original SELECT element:*/
+}
+
+.select-selected {
+    background-color: DodgerBlue;
+}
+
+/*style the arrow inside the select element:*/
+.select-selected:after {
+    position: absolute;
+    content: "";
+    top: 14px;
+    right: 10px;
+    width: 0;
+    height: 0;
+    border: 6px solid transparent;
+    border-color: #959595 transparent transparent transparent;
+}
+
+/*point the arrow upwards when the select box is open (active):*/
+.select-selected.select-arrow-active:after {
+    border-color: transparent transparent #fff transparent;
+    top: 7px;
+}
+
+/*style the items (options), including the selected item:*/
+.select-items div,
+.select-selected {
+    color: #959595;
+    padding: 8px 16px;
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    box-shadow: 0px 1px 5px #00000029;
+    border-radius: 6px;
+    cursor: pointer;
+    user-select: none;
+}
+
+/*style items (options):*/
+.select-items {
+    position: absolute;
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    box-shadow: 0px 1px 5px #00000029;
+    border-radius: 6px;
+    top: 100%;
+    left: 0;
+    right: 0;
+    z-index: 99;
+}
+
+/*hide the items when the select box is closed:*/
+.select-hide {
+    display: none;
+}
+
+.select-items div:hover,
+.same-as-selected {
+    background-color: rgba(0, 0, 0, 0.1);
+}

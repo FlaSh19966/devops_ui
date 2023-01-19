@@ -1,0 +1,371 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for src/pages/Dashboard/Pages/TimeLinePage.vue</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="..\..\..\..\prettify.css" />
+    <link rel="stylesheet" href="..\..\..\..\base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(..\..\..\..\sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="..\..\..\..\index.html">All files</a> / <a href="index.html">src/pages/Dashboard/Pages</a> TimeLinePage.vue
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>0/10</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>0/4</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>0/5</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>0/10</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line low'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">&lt;template&gt;
+  &lt;div class="md-layout"&gt;
+    &lt;div class="md-layout-item md-size-100"&gt;
+      &lt;time-line plain :type="simpleTimeline"&gt;
+        &lt;time-line-item inverted badge-type="danger" badge-icon="card_travel"&gt;
+          &lt;badge slot="header" type="danger"&gt;Another Title&lt;/badge&gt;
+          &lt;p slot="content"&gt;
+            Wifey made the best Father's Day meal ever. So thankful so happy so blessed. Thank you for making my family
+            We just had fun with the “future” theme !!! It was a fun night all together ... The always rude Kanye Show
+            at 2am Sold Out Famous viewing @ Figueroa and 12th in downtown.&lt;/p&gt;
+&nbsp;
+          &lt;h6 slot="footer"&gt;
+            &lt;i class="ti-time"&gt;&lt;/i&gt;
+            11 hours ago via Twitter
+          &lt;/h6&gt;
+        &lt;/time-line-item&gt;
+&nbsp;
+        &lt;time-line-item :class="{'timeline-inverted': responsive}" badge-type="success" badge-icon="extension"&gt;
+          &lt;badge slot="header" type="success"&gt;Another Title&lt;/badge&gt;
+          &lt;p slot="content"&gt;
+            Thank God for the support of my wife and real friends. I also wanted to point out that it’s the first album
+            to go number 1 off of streaming!!! I love you Ellen and also my number one design rule of anything I do from
+            shoes to music to homes is that Kim has to like it....&lt;/p&gt;
+        &lt;/time-line-item&gt;
+&nbsp;
+        &lt;time-line-item inverted badge-type="info" badge-icon="fingerprint"&gt;
+          &lt;badge slot="header" type="info"&gt;Another Title&lt;/badge&gt;
+          &lt;div slot="content"&gt;
+            &lt;p&gt;
+              Called I Miss the Old Kanye That’s all it was Kanye And I love you like Kanye loves Kanye Famous viewing @
+              Figueroa and 12th in downtown LA 11:10PM&lt;/p&gt;
+            &lt;p&gt;
+              What if Kanye made a song about Kanye Royère doesn't make a Polar bear bed but the Polar bear couch is my
+              favorite piece of furniture we own It wasn’t any Kanyes Set on his goals Kanye&lt;/p&gt;
+            &lt;hr&gt;
+            &lt;drop-down direction="down"&gt;
+              &lt;md-button slot="title" class="md-button md-info md-round dropdown-toggle" data-toggle="dropdown"&gt;
+                &lt;md-icon&gt;build&lt;/md-icon&gt;
+              &lt;/md-button&gt;
+              &lt;ul class="dropdown-menu" :class="{'dropdown-menu-right': !responsive}"&gt;
+                &lt;li&gt;&lt;a href="#"&gt;Mike John responded to your email&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href="#"&gt;You have 5 new tasks&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href="#"&gt;You're now friend with Andrew&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href="#"&gt;Another Notification&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href="#"&gt;Another One&lt;/a&gt;&lt;/li&gt;
+              &lt;/ul&gt;
+            &lt;/drop-down&gt;
+          &lt;/div&gt;
+        &lt;/time-line-item&gt;
+&nbsp;
+        &lt;time-line-item :class="{'timeline-inverted': responsive}" badge-type="warning" badge-icon="flight_land"&gt;
+          &lt;badge slot="header" type="warning"&gt;Another Title&lt;/badge&gt;
+          &lt;p slot="content"&gt;
+            Tune into Big Boy's 92.3 I'm about to play the first single from Cruel Winter Tune into Big Boy's 92.3 I'm
+            about to play the first single from Cruel Winter also to Kim’s hair and makeup Lorraine jewelry and the
+            whole style squad at Balmain and the Yeezy team. Thank you Anna for the invite thank you to the whole Vogue
+            team&lt;/p&gt;
+        &lt;/time-line-item&gt;
+      &lt;/time-line&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/template&gt;
+&lt;script&gt;
+<span class="cstat-no" title="statement not covered" >  import {TimeLine, TimeLineItem, Badge} from '@/components'</span>
+  export default {
+    components: {
+      TimeLine,
+      TimeLineItem,
+      Badge
+    },
+<span class="fstat-no" title="function not covered" >    data () {</span>
+<span class="cstat-no" title="statement not covered" >      return {</span>
+        responsive: false
+      }
+    },
+    computed: {
+<span class="fstat-no" title="function not covered" >      simpleTimeline () {</span>
+<span class="cstat-no" title="statement not covered" >        if (this.responsive) {</span>
+<span class="cstat-no" title="statement not covered" >          return 'simple'</span>
+        }
+      }
+    },
+    methods: {
+<span class="fstat-no" title="function not covered" >      onResponsiveInverted () {</span>
+<span class="cstat-no" title="statement not covered" >        if (window.innerWidth &lt; 768){</span>
+<span class="cstat-no" title="statement not covered" >          this.responsive = true</span>
+        } else {
+<span class="cstat-no" title="statement not covered" >          this.responsive = false</span>
+        }
+      }
+    },
+<span class="fstat-no" title="function not covered" >    mounted() {</span>
+<span class="cstat-no" title="statement not covered" >      this.onResponsiveInverted();</span>
+<span class="cstat-no" title="statement not covered" >      window.addEventListener('resize', this.onResponsiveInverted)</span>
+    },
+<span class="fstat-no" title="function not covered" >    beforeDestroy() {</span>
+<span class="cstat-no" title="statement not covered" >      window.removeEventListener('resize', this.onResponsiveInverted)</span>
+    }
+  }
+&lt;/script&gt;
+&lt;style&gt;
+&lt;/style&gt;
+&nbsp;</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Mon Oct 15 2018 16:40:13 GMT+0530 (India Standard Time)
+</div>
+</div>
+<script src="..\..\..\..\prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="..\..\..\..\sorter.js"></script>
+</body>
+</html>

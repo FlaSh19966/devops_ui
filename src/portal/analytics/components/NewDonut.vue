@@ -1,0 +1,363 @@
+<template>
+  <div id="chart">
+  <!-- <svg width="700" height="3000" id="svg" /> -->
+
+<svg id="newpie">
+    <g id="canvas">
+        <g id="art" />
+        <g id="labels" /></g>
+</svg>
+  </div>
+</template>
+
+<script>
+const d3 = require("d3-3");
+export default {
+    name: "NewDonut",
+    props: {
+    data: Array,
+    xKey: String,
+    yKey: String,
+    currency_key: String,
+  },
+  mounted () {
+    var vm = this;
+    this.data.sort(function(a, b) {
+        return b[vm.yKey] - a[vm.yKey];
+    });
+    var sum_yval = 0
+    for( let i = 0; i < this.data.length; i++) {
+        sum_yval = sum_yval +  this.data[i][this.yKey]
+    }
+    for(let i = 0; i < this.data.length; i++){
+        this.data[i].Share = ((this.data[i][this.yKey] / sum_yval) * 100).toFixed(2)+'%';
+        // this.data[i]
+    }
+
+    // this.data = data;
+    // this.xKey = "label";
+    // this.yKey = "instances";
+    // con
+    var svg = d3.select("#newpie");
+    var canvas = d3.select("#canvas");
+    var art = d3.select("#art");
+    var labels = d3.select("#labels");
+
+    // Create the pie layout function.
+    // This function will add convenience
+    // data to our existing data, like 
+    // the start angle and end angle
+    // for each data element.
+    var jhw_pie = d3.layout.pie()
+    jhw_pie.value(function (d, i) {
+        // Tells the layout function what
+        // property of our data object to
+        // use as the value.
+        return d[vm.yKey];
+    });
+
+    // Store our chart dimensions
+    var cDim = {
+            height: 500,
+            width: 900,
+            innerRadius: 140,
+            outerRadius: 190,
+            labelRadius: 195
+        }
+
+    // Set the size of our SVG element
+    svg.attr({
+        height: cDim.height,
+        width: cDim.width
+    });
+
+    // This translate property moves the origin of the group's coordinate
+    // space to the center of the SVG element, saving us translating every
+    // coordinate individually. 
+    canvas.attr("transform", "translate(" + (cDim.width / 2.18) + "," + (cDim.width / 3.4) + ")");
+
+    var pied_data = jhw_pie(this.data);
+
+    // The pied_arc function we make here will calculate the path
+    // information for each wedge based on the data set. This is 
+    // used in the "d" attribute.
+    var    pied_arc = d3.svg.arc()
+            .innerRadius(140)
+            .outerRadius(190)
+            .cornerRadius(6.5)
+            .padAngle(0.01);
+
+    // This is an ordinal scale that returns 10 predefined colors.
+    // It is part of d3 core.
+    // var pied_colors = d3.scale.category20();
+    // var pied_colors =   d3.scale.ordinal()
+	// .range(["#EA3379", "#00C7E6", "#3FBC11", "#FBB317", "#5d62b5", "#29c3be", "#f1726e", "#62b58f", "#d0743c","#ca0020","#f4a582","#92c5de","#0571b0", "#d3fe14", "#fec7f8", "#0b7b3e", "#0bf0e9",'#E666B3', '#33991A', '#CC9999', '#B3B31A', '#00E680',
+    //         '#FF9AA2', '#FFB7B2', '#FFDAC1', '#B5EAD7', '#63d2a8', "#225a4b", "#e5df73", '#6666FF','#ff0000	','#a2798f','#d7c6cf','#e88758','#b13a15','#6d3656','#fffa90','#a4ffaa','#a6cbff','#8500f9','#b077ba','	#765284','#984b67','#9c624e','#feb8ff','#9be3bd','#775934','#008385','#6a2ca1','#e60e68','#ff6d01','#fee9d3'
+    //         ]);
+    var pied_colors =   d3.scale.ordinal()
+	.range(["#FBB317","#FF9750","#3FBC11","#00C7E6","#EA3379","#0165fc","#41fdfe","#24a0ed","#1ac1dd","#7df9ff","#3f00ff","#08ff08","#aeff6e","#56fca2","#45cea2","#06c2ac","#fe6700","#ff3503","#d90166","#be03fd","#ad0afd","#6600ff","#d01c1f","#f1172f","#fff600","#fcd116","#cfff04","#ffc324","#f4c430","#FE7D68","#710193",
+            "#0492C2","#9897A9","#632A0D","#9A794E","#151E3D","#59788D","#1E456E","#016064","#48AAAD","#7E7D9C","#303150","#609D9E","#287E9E","#E4A834","#028910",
+            "#373737","#6C626D","#584D5B","#4D4C5C"]);
+    // Let's start drawing the arcs.
+    var enteringArcs = art.selectAll(".wedge").data(pied_data).enter();
+
+    enteringArcs.append("path")
+        .attr("class", "wedge")
+        .attr("id", function(d, i) {
+            return  i;
+        })
+        // .attr("d", pied_arc)
+        .attr("fill", function (d, i) { 
+        return pied_colors(i);
+        })
+        .transition()
+            .delay(function(d,i) {
+            return i *150; })
+            .duration(3800)
+        	.attrTween('d', function(d) {
+		    var i = d3.interpolate(d.startAngle+0.1, d.endAngle);
+            return function(t) {
+                d.endAngle = i(t); 
+                return pied_arc(d)
+                }
+            })
+            .attr("d", pied_arc)
+        // .transition()
+        //     .duration(function(d, i) {
+        //         return i * 100;
+        //     }).duration(1200)
+        //     .attrTween('d', function(d) {
+        //     var i = d3.interpolate(d.startAngle+0.1, d.endAngle);
+        //     return function(t) {
+        //         d.endAngle = i(t);
+        //     return pied_arc.arc(d);
+        //     }
+        // });
+
+    setTimeout(() => {
+    // Now we'll draw our label lines, etc.
+    var enteringLabels = labels.selectAll(".label").data(pied_data).enter();
+    var labelGroups = enteringLabels.append("g").attr("class", "label");
+    labelGroups.append("circle").attr({
+        x: 0,
+        y: 0,
+        r: 2,
+        fill: "#000",
+        transform: function (d, i) {
+        var centroid = pied_arc.centroid(d);
+            return "translate(" + pied_arc.centroid(d) + ")";
+        },
+            'class': "label-circle"
+    });
+
+    // "When am I ever going to use this?" I said in 
+    // 10th grade trig.
+    var textLines = labelGroups.append("line").attr({
+        x1: function (d, i) {
+            // return pied_arc.centroid(d)[0];
+            var centroid = pied_arc.centroid(d);
+            var midAngle = Math.atan2(centroid[1], centroid[0]);
+            var x = Math.cos(midAngle) * cDim.outerRadius;
+            return x;
+        },
+        y1: function (d, i) {
+            // return pied_arc.centroid(d)[1];
+            var centroid = pied_arc.centroid(d);
+            var midAngle = Math.atan2(centroid[1], centroid[0]);
+            var y = Math.sin(midAngle) * cDim.outerRadius;
+            return y;
+        },
+        x2: function (d, i) {
+            var centroid = pied_arc.centroid(d);
+            var midAngle = Math.atan2(centroid[1], centroid[0]);
+            var x = Math.cos(midAngle) * (cDim.labelRadius);
+            return x;
+        },
+        y2: function (d, i) {
+            var centroid = pied_arc.centroid(d);
+            var midAngle = Math.atan2(centroid[1], centroid[0]);
+        var y = Math.sin(midAngle) * cDim.labelRadius;
+            return y;
+        },
+            'class': "label-line"
+    });
+
+    var textLabels = labelGroups.append("text").attr({
+        x: function (d, i) {
+            var centroid = pied_arc.centroid(d);
+            var midAngle = Math.atan2(centroid[1], centroid[0]);
+            var x = Math.cos(midAngle) * cDim.labelRadius;
+            var sign = (x > 0) ? 1 : -1
+            var labelX = x + (5 * sign)
+            return labelX;
+        },
+        y: function (d, i) {
+            var centroid = pied_arc.centroid(d);
+            var midAngle = Math.atan2(centroid[1], centroid[0]);
+            var y = Math.sin(midAngle) * cDim.labelRadius;
+            return y;
+        },
+            'text-anchor': function (d, i) {
+            var centroid = pied_arc.centroid(d);
+            var midAngle = Math.atan2(centroid[1], centroid[0]);
+            var x = Math.cos(midAngle) * cDim.labelRadius;
+            return (x > 0) ? "start" : "end";
+        },
+            'class': 'label-text'
+    }).text(function (d) {
+        if(d.data[vm.xKey].length > 15){
+            return d.data[vm.xKey].substring(0,15) + '...'
+        } else {
+            return d.data[vm.xKey]
+        }
+
+    });
+
+    var alpha = 0.5;
+    var spacing = 12;
+
+    function relax() {
+        var again = false;
+        textLabels.each(function (d, i) {
+        var  a = this;
+        var   da = d3.select(a);
+        var  y1 = da.attr("y");
+            textLabels.each(function (d, j) {
+            var  b = this;
+                // a & b are the same element and don't collide.
+                if (a == b) return;
+            var db = d3.select(b);
+                // a & b are on opposite sides of the chart and
+                // don't collide
+                if (da.attr("text-anchor") != db.attr("text-anchor")) return;
+                // Now let's calculate the distance between
+                // these elements. 
+            var  y2 = db.attr("y");
+            var   deltaY = y1 - y2;
+                
+                // Our spacing is greater than our specified spacing,
+                // so they don't collide.
+                if (Math.abs(deltaY) > spacing) return;
+                
+                // If the labels collide, we'll push each 
+                // of the two labels up and down a little bit.
+                again = true;
+            var  sign = deltaY > 0 ? 1 : -1;
+            var  adjust = sign * alpha;
+                da.attr("y",+y1 + adjust);
+                db.attr("y",+y2 - adjust);
+            });
+        });
+        // Adjust our line leaders here
+        // so that they follow the labels. 
+        if(again) {
+        var labelElements = textLabels[0];
+            textLines.attr("y2",function(d,i) {
+            var  labelForLine = d3.select(labelElements[i]);
+                return labelForLine.attr("y");
+            });
+            setTimeout(relax,20)
+        }
+
+        var tooltip = 
+            d3.select("#chart").append("div").attr("class", "toolTip")
+        d3.selectAll(".wedge").on("mouseover", function(d,i) {
+            var x = d3.select(this).attr('id');
+            // console.log(d);
+            // console.log(x,vm.data[x]);
+             d3.select(this).style("fill", d3.rgb(pied_colors(i)).brighter(.61));
+            tooltip
+                .style("left", d3.event.pageX - 40 + "px")
+                .style("top", d3.event.pageY - 70 + "px")
+                .style("display", "inline-block")
+                .html((vm.data[x][vm.xKey]) + "<br>"  + vm.currency_key + ' ' + ((Number.isInteger(vm.data[x][vm.yKey])) ? (vm.data[x][vm.yKey]) : (vm.data[x][vm.yKey]).toFixed(2)));
+        });
+
+        d3.selectAll(".wedge").on("mouseout", function(d,i) {
+            d3.select(this).style("fill", pied_colors(i));
+            tooltip.style("display", "none"); // hide tooltip for that element
+        });
+
+        d3.selectAll(".wedge").on("mousemove", function(d) {
+            tooltip
+            .style("top", d3.event.layerY + 10 + "px") 
+            .style("left", d3.event.layerX + 10 + "px"); 
+        });
+
+    } 
+
+    relax();
+
+    d3.selectAll('.label text, .art path').call(toolTip);
+    function toolTip(selection) {
+
+                // add tooltip (svg circle element) when mouse enters label or slice
+                selection.on('mouseenter', function (data,i) {
+                    // console.log(i,data);
+                    art.append('text')
+                        .attr('class', 'toolCircle')
+                        .attr('dy', -15) // hard-coded. can adjust this to adjust text vertical alignment in tooltip
+                        .html(toolTipHTML(data)) // add text to the circle.
+                        .style('font-size', '.9em')
+                        .style('text-anchor', 'middle'); // centres text in tooltip
+
+                    art.append('circle')
+                        .attr('class', 'toolCircle')
+                        .attr('r', 320 * 0.40) // radius of tooltip circle
+                        .style('fill', pied_colors(i)) // colour based on category mouse is over
+                        .style('fill-opacity', 0.45);
+
+                });
+
+                // remove the tooltip when mouse leaves the slice/label
+                selection.on('mouseout', function () {
+                    d3.selectAll('.toolCircle').remove();
+                });
+        }
+        
+         function toolTipHTML(data) {
+                // console.log(data);
+                var tip = '',
+                    i   = 0;
+
+                for (var key in data.data) {
+                    // if value is a number, format it as a percentage
+                    var value =  data.data[key];
+                    // leave off 'dy' attr for first tspan so the 'dy' attr on text element works. The 'dy' attr on
+                    // tspan effectively imitates a line break.
+                    if((key === vm.xKey) || (key === vm.yKey) || (key === "Share")){
+                        // if (key === vm.yKey){
+                            if (i === 0) tip += '<tspan x="0">' + key + ': ' + ((key === vm.yKey)? vm.currency_key+ ' ' + value : value) + '</tspan>';
+                            else tip += '<tspan x="0" dy="1.2em">' + key + ': ' + value + '</tspan>';
+                            i++;
+                        // } else if(key === vm.xKey){
+                        //     if (i === 0) tip += '<tspan x="0">' + key + ': ' + value + '('+  ')' + '</tspan>';
+                        //     else tip += '<tspan x="0" dy="1.2em">' + key + ': ' + value + '</tspan>';
+                        //     i++;
+                        // } 
+
+
+                    }
+                }
+
+                return tip;
+            }
+        }, 1400);
+
+
+    }
+}
+</script>
+<style>
+/* .label-text {
+    font-size: 12px;
+    fill: #393939;
+}
+.label-line {
+    stroke-width: 1;
+    stroke: #393939;
+}
+.label circle {
+    display: none;
+} */
+</style>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuites errors="0"
+            failures="2"
+            tests="1">
+
+  <testsuite name="test"
+    errors="0" failures="2" hostname="" id="" package="test" skipped="0"
+    tests="1" time="45.80" timestamp="">
+  
+    <testcase name="default e2e tests" classname="test" time="45.80" assertions="2">  <failure message="Timed out while waiting for element &lt;#app&gt; to be present for 5000 milliseconds. - expected [0;32m&#34;visible&#34;[0m but got: [0;31m&#34;not found&#34;[0m">    at Object.defaultE2eTests [as default e2e tests] (C:/Users/ashish.i/Git project/chatbot-vue/test/e2e/specs/test.js:13:8)
+    at &lt;anonymous&gt;
+    at process._tickCallback (internal/process/next_tick.js:189:7)</failure>
+
+      <failure message="Testing if element &lt;.hello&gt; is present in 1000 ms. - expected [0;32m&#34;present&#34;[0m but got: [0;31m&#34;not present&#34;[0m">    at Object.defaultE2eTests [as default e2e tests] (C:/Users/ashish.i/Git project/chatbot-vue/test/e2e/specs/test.js:14:15)
+    at &lt;anonymous&gt;
+    at process._tickCallback (internal/process/next_tick.js:189:7)</failure>
+
+    <failure message="    at Object.defaultE2eTests [as default e2e tests] (C:/Users/ashish.i/Git project/chatbot-vue/test/e2e/specs/test.js:14:15)">    at &lt;anonymous&gt;
+    at process._tickCallback (internal/process/next_tick.js:189:7)</failure>
+    </testcase>
+  
+
+  
+
+  
+  </testsuite>
+</testsuites>

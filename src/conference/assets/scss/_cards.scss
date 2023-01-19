@@ -1,0 +1,11 @@
+@import "custom";
+#conference_layout {
+    .card{
+        background-color: $primary;
+        border-radius: 1rem;
+    
+        .card-title{
+            color: #ffffff;
+        }
+    }
+}

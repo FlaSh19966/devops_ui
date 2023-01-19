@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="116.155" height="112.5" viewBox="0 0 116.155 112.5">
+  <defs>
+    <clipPath id="clip-Artboard_4">
+      <rect width="116.155" height="112.5"/>
+    </clipPath>
+  </defs>
+  <g id="Artboard_4" data-name="Artboard 4" clip-path="url(#clip-Artboard_4)">
+    <rect width="116.155" height="112.5" fill="#fff"/>
+    <path id="Path_10" data-name="Path 10" d="M556.543,27.592c8.773-18.221,29.15-17.328,29.15-17.328a21.221,21.221,0,0,1,17.1,8.317c5.476,6.932,6.757,16.209,4.181,24.66-9.241,30.326-50.429,61.234-50.429,61.234s-41.188-30.908-50.429-61.234c-2.575-8.451-1.294-17.728,4.181-24.66a21.225,21.225,0,0,1,17.1-8.317S547.771,9.371,556.543,27.592Z" transform="translate(-498.466)" fill="none" stroke="#6d6d6d" stroke-linecap="round" stroke-linejoin="round" stroke-width="7"/>
+  </g>
+</svg>

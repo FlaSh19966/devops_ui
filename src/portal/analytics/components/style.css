@@ -1,0 +1,146 @@
+/* IMPORTANT:
+WHENEVER CHANGE IS MADE IN THIS CSS FILE, SAME CHANGE WILL HAVE TO BE ADDED TO THE 'graphs_styling' key in the 
+file Bidashboard.vue in between style tags
+
+
+KEEP THIS IN MIND WHENEVER MAKING CHANGE TO THIS FILE.
+THIS IS DONE SO THAT STYLING CAN BE ADDED IN THE PDF REPORT WHICH IS GENERATED.
+*/
+
+
+
+/* Donut Chart and Pie Chart Styling */
+.label-text {
+    /* alignment-baseline: middle; */
+    font-size: 12px;
+    fill: #393939;
+}
+.label-line {
+    stroke-width: 1;
+    stroke: #393939;
+}
+/* .label-circle {
+    fill: #393939;
+} */
+.label circle {
+    display: none;
+}
+
+/* Bar Chart */
+.tick line {
+    stroke: #1b139c;
+}
+.y.axis path {
+    display: none;
+}
+.y.axis .tick line {
+    display: none;
+}
+#xaxis path {
+    display: none;
+}
+
+#xaxis .tick line{
+    display: none;
+}
+.bar-positive {
+    fill: #00C7E6;
+}
+
+.bar-positive:hover {
+    fill: rgb(105, 213, 209);;
+}
+
+.svg-container {
+    display: inline-block;
+    position: relative;
+    width: 100%;
+    padding-bottom: 1%;
+    vertical-align: top;
+    overflow: hidden;
+}
+
+
+
+/* Tooltip for Charts */
+.toolTip {
+    position: absolute;
+    display: none;
+    min-width: 80px;
+    height: auto;
+    background: none repeat scroll 0 0 #ffffff;
+    border: 1px solid rgba(130, 127, 127, 0.72);
+    padding: 14px;
+    text-align: center;
+    z-index: 1000;
+}
+
+
+/* Scrollbar Rectangule */
+.subBar { 
+    fill: gray;
+    opacity: 0.11;
+}
+rect.mover {
+    stroke-opacity: .1;
+    fill: #505050;
+    fill-opacity: .5;
+    border-radius: 45px;
+}
+
+
+/* Horizontal Barchart */
+.bar-positive-horizontal{
+    fill: #FF9750;
+}
+
+/* Grouped Bar Chart */
+.xgrouped path{
+    display: none;
+}
+
+/* Stacked Bar Chart */
+.axis path,
+.axis line {
+    display: none;
+  fill: none;
+  stroke: #000;
+  shape-rendering: crispEdges;
+}
+
+
+#legend_div {
+    overflow-y: auto;
+    height: 220px;
+    width: 235px;
+    overflow-x: hidden;
+    margin-left: -11%;
+    min-width: 235px;
+    min-height: 220px;
+}
+#legend_div::-webkit-scrollbar {
+    max-height: 10px;
+    width: 7px;
+    height: 7px;
+    border-radius: 10px;
+    overflow-x: hidden;
+}
+#legend_div::-webkit-scrollbar {
+    max-height: 10px;
+    width: 7px;
+    height: 7px;
+    border-radius: 10px;
+    overflow-x: hidden;
+}
+#legend_div::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 10px;
+}
+#legend_div::-webkit-scrollbar-thumb {
+    background: #c1c1c1;
+    border-radius: 10px;
+}
+#legend_div::-webkit-scrollbar-thumb:hover {
+    background: #555;
+    border-radius: 10px;
+}
