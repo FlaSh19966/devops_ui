@@ -10,6 +10,5 @@ deploy.sh
 logger.txt
 nginx/certs/
 /test*.py
-config/
 venv/
 /dist/
